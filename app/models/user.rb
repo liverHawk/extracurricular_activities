@@ -9,6 +9,8 @@ class User < ApplicationRecord
   TMP_EMAIL_REGEX = /\A#{TMP_EMAIL_REPREFIX}/
   
   validates :email, presence: true, email: true
+
+  enum role: { user: 0, leader: 1, admin: 2 }
   ## Database authenticatable
   # t.string :email,              null: false, default: ""
   # t.string :encrypted_password, null: false, default: ""

@@ -4,4 +4,7 @@
   <div class="flex justify-center">
     <%= button_to "Sign in with GitHub", user_github_omniauth_authorize_path, class: "btn btn-primary", data: { turbo: false } %>
   </div>
+  <div>
+    <%= user_signed_in? %>
+  </div>
 </div>
