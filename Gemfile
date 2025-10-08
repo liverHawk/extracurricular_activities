@@ -67,3 +67,5 @@ end
 gem "herb", "~> 0.7.5"
 gem "reactionview", "~> 0.1.3"
 gem "falcon", "~> 0.52.3"
+
+gem "devise", "~> 4.9"
