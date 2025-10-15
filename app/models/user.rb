@@ -7,6 +7,9 @@ class User < ApplicationRecord
   
   TMP_EMAIL_REPREFIX = "change@me"
   TMP_EMAIL_REGEX = /\A#{TMP_EMAIL_REPREFIX}/
+
+  has_many :memberships
+  has_many :organizations, through: :memberships
   
   validates :email, presence: true, email: true
 
